@@ -37,6 +37,6 @@ if os.path.exists(filename):
     df = pd.concat([old_df, df], ignore_index=True)
 
 # removing dupes
-df.drop_duplicates(subset=["url"], inplace=True)
+df.drop_duplicates(subset=["company","position","salary_avg"], inplace=True)
 
 df.to_csv("jobs.csv", index=False)
